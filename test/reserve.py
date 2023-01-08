@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 driver=webdriver.Chrome()
 #to maximize the window
 driver.maximize_window()
-driver.get("http://localhost/hotel_reservation/add_reserve.php?room_id=1")
+driver.get("http://localhost//add_reserve.php?room_id=1")
 
 pass_name=driver.find_element(By.XPATH,'/html/body/div[1]/div/div/div[2]/form/div[1]/input')
 pass_name.send_keys('Pooja')
@@ -24,7 +24,7 @@ contact=driver.find_element(By.XPATH,'/html/body/div[1]/div/div/div[2]/form/div[
 contact.send_keys('999348232')
 time.sleep(0.5)
 date=driver.find_element(By.XPATH,'/html/body/div[1]/div/div/div[2]/form/div[6]/input')
-date.send_keys('232/01/2023')
+date.send_keys('22/01/2023')
 time.sleep(1)
 button=driver.find_element(By.XPATH,'/html/body/div[1]/div/div/div[2]/form/div[7]/button')
 button.click()
