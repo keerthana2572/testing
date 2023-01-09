@@ -1,0 +1,19 @@
+name: Selenium tests
+
+on: [push]
+
+jobs:
+  selenium:
+    runs-on: ubuntu-latest
+    services:
+      - chrome
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip
+          pip3 install selenium
+      - name: Run tests
+        run: |
+          python3 home.py
